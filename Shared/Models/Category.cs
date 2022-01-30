@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    class Category
+    public class Category
     {
         [Key]
         public int CategoryID { get; set; }
