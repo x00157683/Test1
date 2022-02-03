@@ -24,7 +24,12 @@ namespace Server.Data
             {
                 categoriesToSeed[i] = new Category { CategoryID = i, Name = $"Category {i}", Description = $"Description {i}" };
             }
+
+            modelBuilder.Entity<Category>().HasData(categoriesToSeed);
+
+
         }        
+
 
     }
 }
