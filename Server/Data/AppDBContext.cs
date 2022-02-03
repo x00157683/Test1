@@ -20,9 +20,9 @@ namespace Server.Data
 
             Category[] categoriesToSeed = new Category[3];
 
-            for(int i = 0; i < categoriesToSeed.Length; i++)
+            for(int i = 1; i < 4; i++)
             {
-                categoriesToSeed[i] = new Category { CategoryID = i, Name = $"Category {i}", Description = $"Description {i}" };
+                categoriesToSeed[i-1] = new Category { CategoryID = i, Name = $"Category {i}", Description = $"Description {i}" };
             }
 
             modelBuilder.Entity<Category>().HasData(categoriesToSeed);
