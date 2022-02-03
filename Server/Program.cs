@@ -8,6 +8,17 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddCors(
+    options =>
+    { 
+        options.AddPolicy("CorsPolicy",
+    builder => 
+    builder
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin());
+
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -25,7 +36,9 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
+app.UseRouting();
 
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
