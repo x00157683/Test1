@@ -18,6 +18,9 @@ namespace Shared.Models
         [MaxLength(100)]
         public string Description { get; set; }
 
+        public List<Car> Cars { get; set; }
+
+
 
     }
 
