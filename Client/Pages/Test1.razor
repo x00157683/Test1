@@ -1,7 +1,7 @@
 ﻿@page "/test1"
-@using global::Shared.Models
 @inject HttpClient Http
 @implements IDisposable
+@using Client.Components.Warp
 
 <PageTitle>Warp</PageTitle>
 
@@ -78,8 +78,8 @@
 					{
 						for (int i = 0; i < InMemoryDatabaseCache.Categories.Count; i++)
 						{
-							<div class="col-md-4">
-								<CategoryCard Category="InMemoryDatabaseCache.Categories[i]" />
+							<div class="col-md-4">	
+								<CategoryCard card = "InMemoryDatabaseCache.Categories[i]" />
 							</div>
 
 						}
@@ -133,6 +133,7 @@
 
 	[Inject] InMemoryDatabaseCache InMemoryDatabaseCache { get; set; }
 	[Parameter] public Category Category { get; set; }
+
 
 
 
