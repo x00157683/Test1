@@ -5,11 +5,11 @@ on:
     - master
 env:
   AZURE_WEBAPP_NAME: Server20220207110700
-  AZURE_WEBAPP_PACKAGE_PATH: Server/publish
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.Server20220207110700_d21d }}
+  AZURE_WEBAPP_PACKAGE_PATH: Client/publish
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.Server20220207110700_ac33 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: Server
+  WORKING_DIRECTORY: Client
 jobs:
   build-and-deploy:
     runs-on: windows-latest
