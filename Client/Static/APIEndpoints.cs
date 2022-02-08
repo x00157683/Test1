@@ -14,6 +14,7 @@
 #endif
 
         internal static readonly string s_categories = $"{SererBaseUrl}/api/categories";
+        internal static readonly string s_cars = $"{SererBaseUrl}/api/cars";
 
     }
 }
