@@ -25,6 +25,7 @@ namespace Server.Controllers
         //                 http//website.com/api/Cars/get url
 
         [HttpGet]
+        [Microsoft.AspNetCore.Mvc.HttpGet]
         public async Task <IActionResult> Get()
         {
 
