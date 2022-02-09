@@ -34,7 +34,7 @@ if (app.Environment.IsDevelopment())
 app.UseSwagger();
 app.UseSwaggerUI(swaggerUIOptions =>
 {
-    swaggerUIOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "WarpAPI");
+    swaggerUIOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "Warp API");
     swaggerUIOptions.RoutePrefix = string.Empty;
 });
 
