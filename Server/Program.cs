@@ -22,10 +22,7 @@ builder.Services.AddCors(
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Server", Version = "v1" });
-});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,11 +32,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSwagger();
-app.UseSwaggerUI(swaggerUIOptions =>
-{
-    swaggerUIOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "WarpAPI");
-    swaggerUIOptions.RoutePrefix = string.Empty;
-});
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
