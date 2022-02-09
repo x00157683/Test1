@@ -8,7 +8,7 @@
         internal const string SererBaseUrl = "https://localhost:5003";
 
 #else
-        //live
+        live
         internal const string SererBaseUrl = "https://appname.azure";
 
 #endif
